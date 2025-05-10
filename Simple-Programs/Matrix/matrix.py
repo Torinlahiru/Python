@@ -12,5 +12,6 @@ for i in range(m):
 for i in matrix:
     print(*i)
 
+# Also you can use this
 # for i in matrix:
 #     print(" " .join(map(str,i)))
