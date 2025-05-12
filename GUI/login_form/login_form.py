@@ -6,14 +6,18 @@ root.title ="Login Form"
 root.geometry('400x400')
 root.configure(bg='#333333')
 
-# Widgets 
-login_label = tkinter.Label(root,text="Login Form",bg='#333333',foreground='#ffffff',font=("Arial",30))
-username = tkinter.Label(root,text="Username",bg='#333333',foreground='#ffffff',font=("Arial",16))
-username_entry = tkinter.Entry(root,font=("Arial",16))
-password = tkinter.Label(root,text="Password",bg='#333333',foreground='#ffffff',font=("Arial",16))
-password_entry = tkinter.Entry(root,show="*",font=("Arial",16))
+# Frame create
 
-btn_login = tkinter.Button(root,text="Log In",bg='#d9c725',foreground='#ffffff',padx=5,pady=5)
+frame =tkinter.Frame(bg='#333333')
+
+# Widgets 
+login_label = tkinter.Label(frame,text="Login Form",bg='#333333',foreground='#ffffff',font=("Arial",30))
+username = tkinter.Label(frame,text="Username",bg='#333333',foreground='#ffffff',font=("Arial",16))
+username_entry = tkinter.Entry(frame,font=("Arial",16))
+password = tkinter.Label(frame,text="Password",bg='#333333',foreground='#ffffff',font=("Arial",16))
+password_entry = tkinter.Entry(frame,show="*",font=("Arial",16))
+
+btn_login = tkinter.Button(frame,text="Log In",bg='#d9c725',foreground='#ffffff' ,font=("Arial",16))
 
 # Place widgets
 
@@ -25,5 +29,5 @@ password_entry.grid(row=2,column=2,pady=20)
 
 btn_login.grid(row=3,column=2,pady=30)
 
-
+frame.pack()
 root.mainloop()
