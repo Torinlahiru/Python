@@ -1,4 +1,5 @@
 import tkinter
+from tkinter import messagebox
 
 root = tkinter.Tk()
 
@@ -17,9 +18,13 @@ def login():
     password = "12345"
 
     if username_entry.get()==username and password_entry.get()==password:
-        print("Successfully logged !")
+        messagebox.showinfo(title="Success",message="Successfully logged !")
+         
     else:
-        print('Invalid user or password ! ')
+         
+        messagebox.showerror(title="Error",message='Invalid user or password ! ')
+        
+
 
 # Widgets 
 login_label = tkinter.Label(frame,text="Login Form",bg='#333333',foreground='#ffffff',font=("Arial",30))
