@@ -18,11 +18,17 @@ set_appearance_mode('dark')
 # Add a label
 label = CTkLabel(
     master=app,
-    text="Welcome! Please click",
+    text="Welcome!",
     text_color="white",  
     font=("Arial", 16)   
 )
 
+# Add a text input field (entry)
+username = CTkEntry(
+    master=app,
+    placeholder_text="Username"
+)
+username.place(relx=0.5, rely=0.4, anchor='center')
 
 # btn create
  
