@@ -31,7 +31,8 @@ username = CTkEntry(
 # Add a password field (entry)
 password = CTkEntry(
     master=app,
-    placeholder_text="Password"
+    placeholder_text="Password",
+    show="*"
 )
 
 
