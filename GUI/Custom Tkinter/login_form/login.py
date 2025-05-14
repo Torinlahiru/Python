@@ -23,12 +23,17 @@ label = CTkLabel(
     font=("Arial", 16)   
 )
 
-# Add a text input field (entry)
+# Add a username field (entry)
 username = CTkEntry(
     master=app,
     placeholder_text="Username"
 )
-username.place(relx=0.5, rely=0.4, anchor='center')
+# Add a password field (entry)
+password = CTkEntry(
+    master=app,
+    placeholder_text="Password"
+)
+
 
 # btn create
  
@@ -37,6 +42,8 @@ btn = CTkButton(master=app,text="Click..",corner_radius=10,hover_color="#0ec3e3"
  
 
 label.place(relx=0.5, rely=0.3, anchor='center')   
-btn.place(relx=0.5,rely=0.5,anchor='center')
+username.place(relx=0.5, rely=0.4, anchor='center')
+password.place(relx=0.5, rely=0.5, anchor='center')
+btn.place(relx=0.5,rely=0.6,anchor='center')
 
 app.mainloop()
