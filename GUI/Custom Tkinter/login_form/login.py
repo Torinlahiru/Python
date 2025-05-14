@@ -38,7 +38,8 @@ password = CTkEntry(
 
 # btn create
  
-btn = CTkButton(master=app,text="Click..",corner_radius=10,hover_color="#0ec3e3",fg_color="#066778",border_color="#50f03e",border_width=2)
+btn = CTkButton(master=app,text="Log In",corner_radius=10,hover_color="#0ec3e3",fg_color="#066778",border_color="#50f03e",border_width=2)
+btn_close = CTkButton(master=app,text="Close",corner_radius=10,hover_color="#0ec3e3",fg_color="#066778",border_color="#50f03e",border_width=2)
 
  
 
@@ -46,5 +47,6 @@ label.place(relx=0.5, rely=0.3, anchor='center')
 username.place(relx=0.5, rely=0.4, anchor='center')
 password.place(relx=0.5, rely=0.5, anchor='center')
 btn.place(relx=0.5,rely=0.6,anchor='center')
+btn_close.place(relx=0.5,rely=0.7,anchor='center')
 
 app.mainloop()
