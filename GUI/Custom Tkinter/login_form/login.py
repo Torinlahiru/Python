@@ -38,9 +38,9 @@ password = CTkEntry(
 # login function
 def login():
     if username.get() == "admin" and  password.get() == "1234":
-        "Success"
+        custom_message("Login", "Login Successful!", color="lightgreen")
     else:
-        return "Error"
+        custom_message("Login", "Invalid Credentials", color="red")
 
 # btn create
  
