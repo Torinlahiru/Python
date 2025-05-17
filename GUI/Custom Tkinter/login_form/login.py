@@ -37,10 +37,10 @@ password = CTkEntry(
 
 # login function
 def login():
-    if username.get() == "admin" and  password.get() == "1234":
-        custom_message("Login", "Login Successful!", color="lightgreen")
+    if username.get() == "admin" and password.get() == "1234":
+        custom_message("Login Successful!", color="lightgreen")
     else:
-        custom_message("Login", "Invalid Credentials", color="red")
+        custom_message("Invalid Credentials", color="red")
 
 # btn create
  
@@ -59,18 +59,15 @@ btn_close = CTkButton(master=app,text="Close",
                       border_color="#50f03e",
                       border_width=2)
 
+# Status Message Label (initially blank)
+message_label = CTkLabel(app, text="", font=("Arial", 14))
+
+message_label.place_forget() 
+
 #Custom msg create
-def custom_message(title, message, color="green"):
-    popup = CTkToplevel(app)
-    popup.title(title)
-    popup.geometry("250x150")
-    popup.resizable(False, False)
-
-    label = CTkLabel(popup, text=message, text_color=color, font=("Arial", 14))
-    label.pack(pady=20)
-
-    btn_ok = CTkButton(popup, text="OK", command=popup.destroy)
-    btn_ok.pack(pady=10)
+def custom_message(text, color="white"):
+    message_label.place(relx=0.5, rely=0.8, anchor="center")
+    message_label.configure(text=text, text_color=color)
 
 # Place widgets
 
