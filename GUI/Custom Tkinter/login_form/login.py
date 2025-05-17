@@ -10,7 +10,21 @@ from PIL import *
 app = CTk()
 
 app.title("Login form")
-app.geometry("400x300")
+
+# Center the app on the screen
+window_width = 400
+window_height = 300
+
+# Get the screen dimension
+screen_width = app.winfo_screenwidth()
+screen_height = app.winfo_screenheight()
+
+# Find the center point
+center_x = int((screen_width - window_width) / 2)
+center_y = int((screen_height - window_height) / 2)
+
+# Set the position of the window to the center of the screen
+app.geometry(f"{window_width}x{window_height}+{center_x}+{center_y}")
 
 # change light/dark mode
 set_appearance_mode('dark')
