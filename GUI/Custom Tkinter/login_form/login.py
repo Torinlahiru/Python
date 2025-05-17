@@ -59,7 +59,20 @@ btn_close = CTkButton(master=app,text="Close",
                       border_color="#50f03e",
                       border_width=2)
 
- 
+#Custom msg create
+def custom_message(title, message, color="green"):
+    popup = CTkToplevel(app)
+    popup.title(title)
+    popup.geometry("250x150")
+    popup.resizable(False, False)
+
+    label = CTkLabel(popup, text=message, text_color=color, font=("Arial", 14))
+    label.pack(pady=20)
+
+    btn_ok = CTkButton(popup, text="OK", command=popup.destroy)
+    btn_ok.pack(pady=10)
+
+# Place widgets
 
 label.place(relx=0.5, rely=0.3, anchor='center')   
 username.place(relx=0.5, rely=0.4, anchor='center')
