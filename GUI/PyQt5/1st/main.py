@@ -5,6 +5,9 @@ from PyQt5.QtWidgets import QApplication, QMainWindow
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
+        self.setWindowTitle("First PyQt5")
+        self.setGeometry(700,300,500,500)
+        
 
 def main():
     app = QApplication(sys.argv)
@@ -16,4 +19,4 @@ def main():
 if __name__ == "__main__":
     main()
 
-    f
+    
