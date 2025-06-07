@@ -1,6 +1,7 @@
 import sys 
 from PyQt5.QtWidgets import QApplication, QMainWindow
 from PyQt5.QtGui import QIcon
+import os
 
 
 class MainWindow(QMainWindow):
@@ -8,6 +9,16 @@ class MainWindow(QMainWindow):
         super().__init__()
         self.setWindowTitle("First PyQt5")
         self.setGeometry(700,300,500,500)
+        # Get the directory of the current .py file
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+
+        # Join the image filename to the script's directory
+        icon_path = os.path.join(script_dir, "windows.png")
+       
+        print(icon_path) 
+        
+
+        self.setWindowIcon(QIcon(icon_path))
         
 
 def main():
@@ -21,3 +32,4 @@ if __name__ == "__main__":
     main()
 
     
+print("Icon exists:", os.path.exists("windows.png"))
