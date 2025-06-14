@@ -9,6 +9,7 @@ class MainWindow(QMainWindow):
         super().__init__()
         self.setWindowTitle("First PyQt5")
         self.setGeometry(700,300,500,500)
+        
         # Get the directory of the current .py file
         script_dir = os.path.dirname(os.path.abspath(__file__))
 
