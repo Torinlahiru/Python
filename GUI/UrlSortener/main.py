@@ -1,6 +1,7 @@
 import tkinter as tk
 import requests
 from tkinter import messagebox
+import pyperclip
 
 # Gui section
 
