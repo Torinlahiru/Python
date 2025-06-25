@@ -11,4 +11,7 @@ root.geometry('400x400')
 
 lbl = tk.Label(root,text="Enter URL ..",font=("Arial",14))
 lbl.pack(pady=10)
+
+url = tk.Entry(root,width=50)
+url.pack(pady=10)
 root.mainloop()
