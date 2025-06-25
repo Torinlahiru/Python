@@ -17,4 +17,8 @@ url.pack(pady=10)
 
 btn = tk.Button(root,text="Short",bg="#007ACC",fg="white")
 btn.pack(pady=10)
+
+
+result = tk.Label(root,text="Result",width=50,fg="#007ACC")
+result.pack(pady=5)
 root.mainloop()
