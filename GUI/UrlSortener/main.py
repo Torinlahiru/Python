@@ -14,4 +14,7 @@ lbl.pack(pady=10)
 
 url = tk.Entry(root,width=50)
 url.pack(pady=10)
+
+btn = tk.Button(root,text="Short",bg="#007ACC",fg="white")
+btn.pack(pady=10)
 root.mainloop()
