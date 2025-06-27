@@ -3,25 +3,6 @@ import requests
 from tkinter import messagebox
 import pyperclip
 
-# Gui section
-
-root = tk.Tk()
-root.title("URL Shortener")
-root.geometry('400x400')
-
-lbl = tk.Label(root,text="Enter URL ..",font=("Arial",14))
-lbl.pack(pady=10)
-
-url = tk.Entry(root,width=50)
-url.pack(pady=10)
-
-btn = tk.Button(root,text="Short",bg="#007ACC",fg="white")
-btn.pack(pady=10)
-
-
-result = tk.Label(root,text="Result",width=50,fg="#007ACC")
-result.pack(pady=5)
-root.mainloop()
 
 # Function url shorten
 def shorten_url():
@@ -44,3 +25,23 @@ def shorten_url():
             messagebox.showerror("API Error", f"Failed to shorten URL. Status code: {response.status_code}")
     except Exception as e:
         messagebox.showerror("Error", f"An error occurred:\n{e}")
+
+# Gui section
+
+root = tk.Tk()
+root.title("URL Shortener")
+root.geometry('400x400')
+
+lbl = tk.Label(root,text="Enter URL ..",font=("Arial",14))
+lbl.pack(pady=10)
+
+url = tk.Entry(root,width=50,font=("Arial",12))
+url.pack(pady=10)
+
+btn = tk.Button(root,text="Short",bg="#007ACC",fg="white",command=shorten_url,width=10,height=2)
+btn.pack(pady=10)
+
+
+result = tk.Label(root,text="Result",width=50,fg="#007ACC",font=("Arial",12))
+result.pack(pady=5)
+root.mainloop()
